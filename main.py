@@ -85,7 +85,22 @@ def load_file():
     read_stat_file("Please enter the stats file name: ")
     print("Step 2: Stats file read for event generation completed. ")
 
-# Step 3: inconsistencies check
+# Step 3: Check inconsistencies
+def match_event_type(event_name, event_type, std_deviation):
+    match event_type:
+        case 'D':   # Standard deviation must be integer
+            if not std_deviation.is_integer():
+                print(f"Warning: {event_name} is discrete but has a non-integer standard deviation.")
+        
+        case 'C':   # Standard deviation must be float
+            if std_deviation.is_integer():
+                print(f"Warning: {event_name} is discrete but has an integer standard deviation.")
+
+        case _:
+            print(f"Warning: {event_name} is not discrete and continuous.")
+            print("Please correct it with either 'C' and 'D' before re-load the file...")
+            load_file()
+
 def check_std_deviation():
     global events, stats
 
@@ -95,20 +110,7 @@ def check_std_deviation():
             # If current stats event name is equal to event event name...
             if event['event_name'] == stat['event_name']:
                 # Check event type...
-                match event['event_type']:
-                    case 'D':   # Standard deviation must be integer
-                        if not stat['std_deviation'].is_integer():
-                            print(f"Warning: {event['event_name']} is discrete but has a non-integer standard deviation.")
-                        break
-                    
-                    case 'C':   # Standard deviation must be float
-                        if stat['std_deviation'].is_integer():
-                            print(f"Warning: {event['event_name']} is discrete but has an integer standard deviation.")
-                        break
-
-                    case _:
-                        print(f"Warning: {event['event_name']} is not discrete and continuous.")
-                        break
+                match_event_type(event['event_name'], event['event_type'], stat['std_deviation'])
 
 # Step 3: Alert check
 def check_alert():
@@ -127,6 +129,6 @@ def check_alert():
 load_file() # Step 1 and 2: Prompt user to input the file name
 
 # Step 3
-check_std_deviation()   # inconsistencies check
+check_std_deviation()   # Inconsistencies check
 check_alert()   # Alert check
 input("Step 3: Inconsistencies check completed. Press enter to proceed next step...")
