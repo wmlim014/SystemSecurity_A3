@@ -91,43 +91,58 @@ def load_file():
     read_stat_file("Please enter the stats file name: ")
     print("Step 2: Stats file read for event generation completed. ")
 
-# Step 3: Check inconsistencies
-def match_event_type(event_name, event_type, std_deviation):
-    match event_type:
+# Step 3: 
+# Check inconsistencies
+def std_dvt_match_event_type(event, stat):
+    match event['event_type']:
         case 'D':   # Standard deviation must be integer
-            if not std_deviation.is_integer():
-                print(f"Warning: {event_name} is discrete but has a non-integer standard deviation.")
+            if not stat['std_deviation'].is_integer():
+                print(f"Warning: {event['event_name']} is discrete but has a non-integer standard deviation.")
         
         case 'C':   # Standard deviation must be float
-            if std_deviation.is_integer():
-                print(f"Warning: {event_name} is discrete but has an integer standard deviation.")
+            if stat['std_deviation'].is_integer():
+                print(f"Warning: {event['event_name']} is discrete but has an integer standard deviation.")
 
         case _:
-            print(f"Warning: {event_name} is not discrete and continuous.")
-            print("Please correct it with either 'C' and 'D' before re-load the file...")
-            load_file()
+            print(f"Warning: {event['event_name']} is not discrete and continuous.")
+            reload_file()
 
-def check_std_deviation():
-    global events, stats
+# Check alert
+def check_alert(event):
+    # If the alert is not positive integer {1, 2, 3, ...}
+    if int(event['alert']) <= 0:
+        print(f"Warning: {event['event_name']} alert is not a positive integer.")
+        reload_file()
+
+def validate_min_max(event, min, max):
+
+    if min > max:
+        print(f"Warning: {event['event_name']} minimum value is bigger than the maximum value.")
+        reload_file()
+
+    elif min == max:
+        print(f"Warning: {event['event_name']} minimum and maximum value are equal.")
+        reload_file()
+
+def reload_file():
+    print("Please correct the last warning data before re-load the file...")
+    load_file()
+
+def check_data():
 
     print()
     for event in events:
+        min = event['min']
+        max = event['max']
+
+        check_alert(event)
+        validate_min_max(event, min, max)
+
         for stat in stats:
             # If current stats event name is equal to event event name...
             if event['event_name'] == stat['event_name']:
                 # Check event type...
-                match_event_type(event['event_name'], event['event_type'], stat['std_deviation'])
-
-# Step 3: Alert check
-def check_alert():
-    global events
-
-    print()
-    for event in events:
-        if event['alert'] <= 0:
-            print(f"Warning: {event['event_name']} alert is not a positive integer.")
-            print("Please correct the alert and re-load the file...")
-            load_file()
+                std_dvt_match_event_type(event, stat)
 
 # Step 4:
 # Generate value for specific event
@@ -169,7 +184,7 @@ def generate_events(no_of_days):
 # Function to write the event into logs file
 def write_log_file(generated_events):
     # Convert generated data into json format
-    json_object = json.dumps(generated_events, indent = 6)
+    json_object = json.dumps(generated_events, indent = np.size(events))
     with open(log_file_name, "w") as outfile:
         outfile.write(json_object)
 
@@ -181,12 +196,11 @@ def write_log_file(generated_events):
 load_file() # Step 1 and 2: Prompt user to input the file name
 
 # Step 3
-check_std_deviation()   # Inconsistencies check
-check_alert()   # Alert check
+check_data()
 input("Step 3: Inconsistencies check completed. Press enter to proceed next step...")
 
 # Step 4
 events = generate_events(no_of_days)
 write_log_file(events)
-print(json.dumps(events, indent = 6))   # Debug line
+print(json.dumps(events, indent = np.size(events)))   # Debug line
 input("Step 4: Event generation completed. Press Enter to proceed next step...")

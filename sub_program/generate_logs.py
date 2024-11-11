@@ -45,14 +45,13 @@ def generate_events(no_of_days):
 # Function to write the event
 def write_log_file(generated_events):
     # Convert generated data into json format
-    json_object = json.dumps(generated_events, indent = 6)
+    json_object = json.dumps(generated_events, indent = np.size(events))
     with open(log_file_name, "w") as outfile:
         outfile.write(json_object)
 
     print(f"Generated event data saved to {log_file_name}")
 
-step1_to_3()
 events = generate_events(no_of_days)
 write_log_file(events)
-print(json.dumps(events, indent = 6))   # Debug line
+print(json.dumps(events, indent = np.size(events)))   # Debug line
 input("Step 4: Event generation completed. Press Enter to proceed next step...")

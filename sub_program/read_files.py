@@ -85,7 +85,7 @@ def load_file():
     read_stat_file("Please enter the stats file name: ")
     print("Step 2: Stats file read for event generation completed. ")
 
-# load_file()   # Debug line
+load_file()   # Debug line
 '''
 #################
 # Debug Section #
