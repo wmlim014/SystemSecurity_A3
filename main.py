@@ -76,23 +76,57 @@ def read_stat_file(input_string):
             print("File not found. Please check the file name and try again.")
             file_name = input(input_string)
 
-# Prompt user to input the file name
-read_event_file("Please enter the events file name: ")
-read_stat_file("Please enter the stats file name: ")
+# Step 1 and 2: Prompt user to input the file name
+def load_file():
+    read_event_file("Please enter the events file name: ")
+    print("Step 1: Events file read completed, proceed to next step...")
 
-#################
-# Debug Section #
-#################
-# Events
-print(f"Number of event: {num_of_events}")
-print("Stored events:")
-for event in events:
-    print(event)
+    print()
+    read_stat_file("Please enter the stats file name: ")
+    print("Step 2: Stats file read for event generation completed. ")
 
-print()
+# Step 3: inconsistencies check
+def check_std_deviation():
+    global events, stats
 
-# Stats
-print(f"Number of stat: {num_of_stats}")
-print("Stored stats:")
-for stat in stats:
-    print(stat)
+    print()
+    for event in events:
+        for stat in stats:
+            # If current stats event name is equal to event event name...
+            if event['event_name'] == stat['event_name']:
+                # Check event type...
+                match event['event_type']:
+                    case 'D':   # Standard deviation must be integer
+                        if not stat['std_deviation'].is_integer():
+                            print(f"Warning: {event['event_name']} is discrete but has a non-integer standard deviation.")
+                        break
+                    
+                    case 'C':   # Standard deviation must be float
+                        if stat['std_deviation'].is_integer():
+                            print(f"Warning: {event['event_name']} is discrete but has an integer standard deviation.")
+                        break
+
+                    case _:
+                        print(f"Warning: {event['event_name']} is not discrete and continuous.")
+                        break
+
+# Step 3: Alert check
+def check_alert():
+    global events
+
+    print()
+    for event in events:
+        if event['alert'] <= 0:
+            print(f"Warning: {event['event_name']} alert is not a positive integer.")
+            print("Please correct the alert and re-load the file...")
+            load_file()
+
+################
+# MAIN PROGRAM #
+################
+load_file() # Step 1 and 2: Prompt user to input the file name
+
+# Step 3
+check_std_deviation()   # inconsistencies check
+check_alert()   # Alert check
+input("Step 3: Inconsistencies check completed. Press enter to proceed next step...")

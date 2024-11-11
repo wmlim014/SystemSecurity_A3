@@ -76,10 +76,17 @@ def read_stat_file(input_string):
             print("File not found. Please check the file name and try again.")
             file_name = input(input_string)
 
-# Prompt user to input the file name
-read_event_file("Please enter the events file name: ")
-read_stat_file("Please enter the stats file name: ")
+def load_file():
+    # Prompt user to input the file name
+    read_event_file("Please enter the events file name: ")
+    print("Step 1: Events file read completed, proceed to next step...")
+    
+    print()
+    read_stat_file("Please enter the stats file name: ")
+    print("Step 2: Stats file read for event generation completed. ")
 
+# load_file()   # Debug line
+'''
 #################
 # Debug Section #
 #################
@@ -96,3 +103,4 @@ print(f"Number of stat: {num_of_stats}")
 print("Stored stats:")
 for stat in stats:
     print(stat)
+'''
