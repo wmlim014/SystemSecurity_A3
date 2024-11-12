@@ -36,7 +36,7 @@ def read_event_file(input_string):
                         event_dist["min"] = int(data[2].strip())
                         event_dist["max"] = int(data[3].strip())
 
-                    event_dist["alert"] = int(data[4].strip())
+                    event_dist["weight"] = int(data[4].strip())
                     
                     events.append(event_dist)
                     # print(event_dist)  # Debug line

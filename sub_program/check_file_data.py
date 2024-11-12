@@ -14,10 +14,10 @@ def std_dvt_match_event_type(event, stat):
             print(f"Warning: {event['event_name']} is not discrete and continuous.")
             reload_file()
 
-def check_alert(event):
-    # If the alert is not positive integer {1, 2, 3, ...}
-    if int(event['alert']) <= 0:
-        print(f"Warning: {event['event_name']} alert is not a positive integer.")
+def check_weight(event):
+    # If the weight is not positive integer {1, 2, 3, ...}
+    if int(event['weight']) <= 0:
+        print(f"Warning: {event['event_name']} weight is not a positive integer.")
         reload_file()
 
 def validate_min_max(event, min, max):
@@ -41,7 +41,7 @@ def check_data():
         min = event['min']
         max = event['max']
 
-        check_alert(event)
+        check_weight(event)
         validate_min_max(event, min, max)
 
         for stat in stats:

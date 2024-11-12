@@ -42,7 +42,7 @@ def read_event_file(input_string):
                         event_dist["min"] = int(data[2].strip())
                         event_dist["max"] = int(data[3].strip())
 
-                    event_dist["alert"] = int(data[4].strip())
+                    event_dist["weight"] = int(data[4].strip())
                     
                     events.append(event_dist)
                     # print(event_dist)  # Debug line
@@ -107,11 +107,11 @@ def std_dvt_match_event_type(event, stat):
             print(f"Warning: {event['event_name']} is not discrete and continuous.")
             reload_file()
 
-# Check alert
-def check_alert(event):
-    # If the alert is not positive integer {1, 2, 3, ...}
-    if int(event['alert']) <= 0:
-        print(f"Warning: {event['event_name']} alert is not a positive integer.")
+# Check weight
+def check_weight(event):
+    # If the weight is not positive integer {1, 2, 3, ...}
+    if int(event['weight']) <= 0:
+        print(f"Warning: {event['event_name']} weight is not a positive integer.")
         reload_file()
 
 def validate_min_max(event, min, max):
@@ -135,7 +135,7 @@ def check_data():
         min = event['min']
         max = event['max']
 
-        check_alert(event)
+        check_weight(event)
         validate_min_max(event, min, max)
 
         for stat in stats:
@@ -200,7 +200,7 @@ check_data()
 input("Step 3: Inconsistencies check completed. Press enter to proceed next step...")
 
 # Step 4
-events = generate_events(no_of_days)
-write_log_file(events)
-print(json.dumps(events, indent = np.size(events)))   # Debug line
+generated_events = generate_events(no_of_days)
+write_log_file(generated_events)
+print(json.dumps(generated_events, indent = np.size(events)))   # Debug line
 input("Step 4: Event generation completed. Press Enter to proceed next step...")
