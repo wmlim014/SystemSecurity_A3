@@ -1,0 +1,27 @@
+{
+    "Logins": {
+        "total": 37,
+        "mean": 3.7,
+        "std_dev": 0.9
+    },
+    "Time online": {
+        "total": 1640.62,
+        "mean": 164.06,
+        "std_dev": 25.94
+    },
+    "Emails sent": {
+        "total": 60,
+        "mean": 6.0,
+        "std_dev": 0.0
+    },
+    "Emails opened": {
+        "total": 60,
+        "mean": 6.0,
+        "std_dev": 0.0
+    },
+    "Emails deleted": {
+        "total": 56,
+        "mean": 5.6,
+        "std_dev": 0.8
+    }
+}

@@ -1,4 +1,5 @@
-# SystemSecurity_A3 Compile in Window
+# SystemSecurity_A3 Compile
+> in Window
 ```
 python main.py
 ```
@@ -11,9 +12,24 @@ python main.py
 # Understand the file in `sub_program` with the following sequence
 1. `read_files.py`: Prompt user to key in the file name and load through the data in file
     > Step 1 and 2
+    ```
+    python read_files.py
+    ```
 
 2. `check_file_data.py`: Check the consistencies and alert value...
     > Step 3
+    ```
+    python check_file_data.py
+    ```
 
-3. `generate_logs.py`: Generate the events for days base on mean, standard deviation with min <= x => max
+3. `generate_logs.py`: Generate the events for days base on mean, standard deviation with min <= x => max and write into `logs.json`
     > Step 4
+    ```
+    python generate_logs.py
+    ```
+
+4. `daily_report.py`: Calculate the generated event statistics and write into `analysis_results.json`
+    > Step 5
+    ```
+    python daily_report.py
+    ```

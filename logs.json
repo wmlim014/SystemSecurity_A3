@@ -1,82 +1,82 @@
 [
-      {
-            "date": "01 Nov 2024",
-            "Logins": 4,
-            "Time online": 124.12,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      },
-      {
-            "date": "02 Nov 2024",
-            "Logins": 5,
-            "Time online": 137.36,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      },
-      {
-            "date": "03 Nov 2024",
-            "Logins": 5,
-            "Time online": 195.15,
-            "Emails sent": 5,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      },
-      {
-            "date": "04 Nov 2024",
-            "Logins": 4,
-            "Time online": 142.87,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 5
-      },
-      {
-            "date": "05 Nov 2024",
-            "Logins": 2,
-            "Time online": 124.11,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      },
-      {
-            "date": "06 Nov 2024",
-            "Logins": 4,
-            "Time online": 141.92,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 3
-      },
-      {
-            "date": "07 Nov 2024",
-            "Logins": 5,
-            "Time online": 125.23,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      },
-      {
-            "date": "08 Nov 2024",
-            "Logins": 4,
-            "Time online": 96.3,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 5
-      },
-      {
-            "date": "09 Nov 2024",
-            "Logins": 4,
-            "Time online": 167.54,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      },
-      {
-            "date": "10 Nov 2024",
-            "Logins": 2,
-            "Time online": 151.59,
-            "Emails sent": 6,
-            "Emails opened": 6,
-            "Emails deleted": 6
-      }
+     {
+          "date": "02 Nov 2024",
+          "Logins": 3,
+          "Time online": 163.34,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "03 Nov 2024",
+          "Logins": 4,
+          "Time online": 145.57,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "04 Nov 2024",
+          "Logins": 5,
+          "Time online": 175.01,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "05 Nov 2024",
+          "Logins": 5,
+          "Time online": 135.91,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "06 Nov 2024",
+          "Logins": 2,
+          "Time online": 164.48,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "07 Nov 2024",
+          "Logins": 5,
+          "Time online": 126.81,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "08 Nov 2024",
+          "Logins": 5,
+          "Time online": 105.56,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "09 Nov 2024",
+          "Logins": 3,
+          "Time online": 183.72,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "10 Nov 2024",
+          "Logins": 3,
+          "Time online": 171.48,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "11 Nov 2024",
+          "Logins": 5,
+          "Time online": 102.67,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 4
+     }
 ]

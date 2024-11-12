@@ -1,16 +1,8 @@
 [
      {
-          "date": "01 Nov 2024",
-          "Logins": 4,
-          "Time online": 149.48,
-          "Emails sent": 6,
-          "Emails opened": 2,
-          "Emails deleted": 4
-     },
-     {
           "date": "02 Nov 2024",
-          "Logins": 3,
-          "Time online": 106.22,
+          "Logins": 4,
+          "Time online": 176.49,
           "Emails sent": 6,
           "Emails opened": 6,
           "Emails deleted": 6
@@ -18,15 +10,15 @@
      {
           "date": "03 Nov 2024",
           "Logins": 4,
-          "Time online": 172.32,
+          "Time online": 158.28,
           "Emails sent": 6,
           "Emails opened": 6,
-          "Emails deleted": 5
+          "Emails deleted": 6
      },
      {
           "date": "04 Nov 2024",
-          "Logins": 4,
-          "Time online": 166.97,
+          "Logins": 5,
+          "Time online": 136.61,
           "Emails sent": 6,
           "Emails opened": 6,
           "Emails deleted": 6
@@ -34,47 +26,55 @@
      {
           "date": "05 Nov 2024",
           "Logins": 3,
-          "Time online": 170.61,
-          "Emails sent": 6,
-          "Emails opened": 6,
-          "Emails deleted": 6
-     },
-     {
-          "date": "06 Nov 2024",
-          "Logins": 2,
-          "Time online": 158.17,
+          "Time online": 173.44,
           "Emails sent": 6,
           "Emails opened": 6,
           "Emails deleted": 4
      },
      {
-          "date": "07 Nov 2024",
-          "Logins": 4,
-          "Time online": 159.22,
+          "date": "06 Nov 2024",
+          "Logins": 5,
+          "Time online": 178.36,
           "Emails sent": 6,
           "Emails opened": 6,
-          "Emails deleted": 3
+          "Emails deleted": 6
+     },
+     {
+          "date": "07 Nov 2024",
+          "Logins": 2,
+          "Time online": 193.33,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
      },
      {
           "date": "08 Nov 2024",
-          "Logins": 5,
-          "Time online": 156.65,
+          "Logins": 4,
+          "Time online": 197.85,
           "Emails sent": 6,
           "Emails opened": 6,
-          "Emails deleted": 5
+          "Emails deleted": 4
      },
      {
           "date": "09 Nov 2024",
-          "Logins": 1,
-          "Time online": 175.63,
+          "Logins": 3,
+          "Time online": 111.94,
           "Emails sent": 6,
           "Emails opened": 6,
-          "Emails deleted": 5
+          "Emails deleted": 6
      },
      {
           "date": "10 Nov 2024",
           "Logins": 4,
-          "Time online": 121.34,
+          "Time online": 138.69,
+          "Emails sent": 6,
+          "Emails opened": 6,
+          "Emails deleted": 6
+     },
+     {
+          "date": "11 Nov 2024",
+          "Logins": 3,
+          "Time online": 175.63,
           "Emails sent": 6,
           "Emails opened": 6,
           "Emails deleted": 6

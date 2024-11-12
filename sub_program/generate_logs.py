@@ -8,17 +8,23 @@ log_file_name = "logs.json"
 
 # Generate value for specific event
 def generate_event_value(event, stat):
+    mean = stat['mean']
+    std_dev = stat['std_deviation']
+    min_val = event['min']
+    max_val = event['max']
+
     # If the event is continues respectively... 
     if event['event_type'] == 'C':
-        value = np.random.normal(stat['mean'], stat['std_deviation'])
-        value = max(min(value, event['max']), event['min']) # Make sure the value is within the range
-        return round(value, 2)
+        value = np.random.normal(mean, std_dev, 1000)
+        value = np.clip(value, min_val, max_val)  # Clip to range
+        return round(np.random.choice(value), 2)
     
     # Else the event is discrete respectively...
     else:
-        value = int(round(np.random.normal(stat['mean'], stat['std_deviation'])))
-        value = max(min(value, event['max']), event['min']) # Make sure the value is within the range
-        return value
+        value = np.random.normal(mean, std_dev, 1000)
+        value = np.clip(value, min_val, max_val)
+        value = np.round(value).astype(int)  # Convert to integer
+        return int(np.random.choice(value))
 
 # Loop through all events and stats to generate the events value for days
 def generate_events(no_of_days):
