@@ -3,6 +3,14 @@
 ```
 python main.py
 ```
+> in VM
+*If lIBRARY NOT FOUN: NUMPY*
+```
+pip3 install numpy
+```
+```
+python3 main.py
+```
 
 >[!NOTE]
 >1. Please open file in sub_program to modified the program for testing
@@ -11,7 +19,7 @@ python main.py
 
 # Understand the file in `sub_program` with the following sequence
 1. `read_files.py`: Prompt user to key in the file name and load through the data in file
-    > Step 1 and 2
+    > Step 1 and 2: load `a.txt` and `b.txt` for testing
     ```
     python read_files.py
     ```
@@ -32,4 +40,10 @@ python main.py
     > Step 5
     ```
     python daily_report.py
+    ```
+
+5. `new_stats_process.py`: Anomalies detection
+    > Step 6 to 10
+    ```
+    python new_stats_process.py
     ```

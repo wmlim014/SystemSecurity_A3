@@ -1,18 +1,18 @@
 {
     "Logins": {
-        "total": 40,
-        "mean": 4.0,
-        "std_dev": 1.1
+        "total": 34,
+        "mean": 3.4,
+        "std_dev": 1.28
     },
     "Time online": {
-        "total": 1474.55,
-        "mean": 147.45,
-        "std_dev": 27.42
+        "total": 1430.6,
+        "mean": 143.06,
+        "std_dev": 22.33
     },
     "Emails sent": {
-        "total": 60,
-        "mean": 6.0,
-        "std_dev": 0.0
+        "total": 57,
+        "mean": 5.7,
+        "std_dev": 0.9
     },
     "Emails opened": {
         "total": 60,
@@ -20,8 +20,8 @@
         "std_dev": 0.0
     },
     "Emails deleted": {
-        "total": 58,
-        "mean": 5.8,
-        "std_dev": 0.6
+        "total": 56,
+        "mean": 5.6,
+        "std_dev": 0.8
     }
 }

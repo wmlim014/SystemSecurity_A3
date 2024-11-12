@@ -86,21 +86,20 @@ def load_file():
     print("Step 2: Stats file read for event generation completed. ")
 
 load_file()   # Debug line
-'''
+
 #################
 # Debug Section #
 #################
 # Events
-print(f"Number of event: {num_of_events}")
-print("Stored events:")
-for event in events:
-    print(event)
+# print(f"Number of event: {num_of_events}")
+# print("Stored events:")
+# for event in events:
+#     print(event)
 
-print()
+# print()
 
-# Stats
-print(f"Number of stat: {num_of_stats}")
-print("Stored stats:")
-for stat in stats:
-    print(stat)
-'''
+# # Stats
+# print(f"Number of stat: {num_of_stats}")
+# print("Stored stats:")
+# for stat in stats:
+#     print(stat)

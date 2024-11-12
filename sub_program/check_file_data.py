@@ -1,18 +1,17 @@
 from read_files import *
 
 def std_dvt_match_event_type(event, stat):
-    match event['event_type']:
-        case 'D':   # Standard deviation must be integer
-            if not stat['std_deviation'].is_integer():
-                print(f"Warning: {event['event_name']} is discrete but has a non-integer standard deviation.")
+    if event["event_type"] == 'D':  # Standard deviation must be integer
+        if not stat['std_deviation'].is_integer():
+            print(f"Warning: {event['event_name']} is discrete but has a non-integer standard deviation.")
         
-        case 'C':   # Standard deviation must be float
-            if stat['std_deviation'].is_integer():
-                print(f"Warning: {event['event_name']} is discrete but has an integer standard deviation.")
+    elif event["event_type"] == 'C':   # Standard deviation must be float
+        if stat['std_deviation'].is_integer():
+            print(f"Warning: {event['event_name']} is discrete but has an integer standard deviation.")
 
-        case _:
-            print(f"Warning: {event['event_name']} is not discrete and continuous.")
-            reload_file()
+    else:
+        print(f"Warning: {event['event_name']} is not discrete and continuous.")
+        reload_file()
 
 def check_weight(event):
     # If the weight is not positive integer {1, 2, 3, ...}

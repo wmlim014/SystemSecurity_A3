@@ -1,0 +1,182 @@
+[
+    {
+        "date": "13 Oct 2024",
+        "anomaly_counter": 10.36,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "14 Oct 2024",
+        "anomaly_counter": 9.99,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "15 Oct 2024",
+        "anomaly_counter": 16.01,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "16 Oct 2024",
+        "anomaly_counter": 17.28,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "17 Oct 2024",
+        "anomaly_counter": 8.36,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "18 Oct 2024",
+        "anomaly_counter": 12.68,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "19 Oct 2024",
+        "anomaly_counter": 8.04,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "20 Oct 2024",
+        "anomaly_counter": 14.31,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "21 Oct 2024",
+        "anomaly_counter": 7.01,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "22 Oct 2024",
+        "anomaly_counter": 12.95,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "23 Oct 2024",
+        "anomaly_counter": 14.25,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "24 Oct 2024",
+        "anomaly_counter": 12.68,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "25 Oct 2024",
+        "anomaly_counter": 8.6,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "26 Oct 2024",
+        "anomaly_counter": 11.67,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "27 Oct 2024",
+        "anomaly_counter": 5.23,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "28 Oct 2024",
+        "anomaly_counter": 9.05,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "29 Oct 2024",
+        "anomaly_counter": 9.63,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "30 Oct 2024",
+        "anomaly_counter": 8.25,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "31 Oct 2024",
+        "anomaly_counter": 13.55,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "01 Nov 2024",
+        "anomaly_counter": 11.61,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "02 Nov 2024",
+        "anomaly_counter": 16.41,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "03 Nov 2024",
+        "anomaly_counter": 8.21,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "04 Nov 2024",
+        "anomaly_counter": 12.66,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "05 Nov 2024",
+        "anomaly_counter": 16.55,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "06 Nov 2024",
+        "anomaly_counter": 9.93,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "07 Nov 2024",
+        "anomaly_counter": 8.43,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "08 Nov 2024",
+        "anomaly_counter": 11.27,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "09 Nov 2024",
+        "anomaly_counter": 5.94,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "10 Nov 2024",
+        "anomaly_counter": 14.01,
+        "threshold": 18,
+        "status": "OK"
+    },
+    {
+        "date": "11 Nov 2024",
+        "anomaly_counter": 15.5,
+        "threshold": 18,
+        "status": "OK"
+    }
+]
