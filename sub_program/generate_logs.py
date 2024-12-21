@@ -1,7 +1,6 @@
 from check_file_data import *
 import numpy as np
 import datetime
-import json
 
 no_of_days = 10
 log_file_name = "logs.json"
